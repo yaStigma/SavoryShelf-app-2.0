@@ -1,0 +1,27 @@
+.wrapper {
+  height: 130px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--color--bg--nav);
+}
+
+.link {
+  width: 200px;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 200%;
+  text-align: center;
+  color: var(--color-text-main--light);
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+.active,
+.link:hover,
+.link:focus {
+  color: var(--color-text-main--light);
+}

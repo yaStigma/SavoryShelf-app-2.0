@@ -1,0 +1,12 @@
+.wrapper {
+  width: 180px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color--bg--nav);
+  color: var(--color-text-main--light);
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 200%;
+  text-align: center;
+}

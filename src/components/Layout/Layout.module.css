@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Висота на весь екран */
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0; /* Фіксована висота для хедера */
+}
+
+.mainWrapper {
+  flex: 1; /* Головна частина займає весь доступний простір */
+  display: flex;
+  flex-direction: row; /* Розташування в ряд */
+}
+
+.dashboard {
+  flex: 0 0 180px; /* Фіксована ширина сайдбара (Dashboard) */
+}
+
+.content {
+  flex: 1; /* Контент займає всю доступну ширину */
+}

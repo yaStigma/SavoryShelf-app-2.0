@@ -1,0 +1,26 @@
+/* .wrapper {
+    width: 1440px;
+    height: 696px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--color-white);
+  }
+  .title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 67%;
+    color: var(--color-button);
+    padding-bottom: 24px;
+  }
+  .text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    color: var(--color-text);
+  }
+  .box {
+    display: flex;
+  } */
