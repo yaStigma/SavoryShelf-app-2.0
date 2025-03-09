@@ -16,14 +16,18 @@ export interface Meal {
     dateModified: string | null;
   }
  export interface Category {
-    strCategory: string;
+  idCategory: string;
+  strCategory: string;
+  strCategoryThumb: string;
+  strCategoryDescription: string;
+
   }
   export interface MealsResponse {
     meals: Meal[] | null;
   }
   
   export interface CategoriesResponse {
-    meals: Category[] | null;
+    categories: Category[] | null;
   }
 
   export interface RecipeState {

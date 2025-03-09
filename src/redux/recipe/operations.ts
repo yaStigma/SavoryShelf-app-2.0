@@ -36,8 +36,8 @@ export const fetchCategories = createAsyncThunk<Category[]>(
   "recipe/fetchCategories",
   async (_, thunkAPI) => {
     try {
-      const { data } = await axios.get<CategoriesResponse>("/list.php?c=list");
-      return data.meals || [];
+      const { data } = await axios.get<CategoriesResponse>("/categories.php");
+      return data.categories || [];
     } catch (error: unknown) {
       if (error instanceof Error) {
         return thunkAPI.rejectWithValue(error.message);

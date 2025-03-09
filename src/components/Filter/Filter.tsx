@@ -13,7 +13,6 @@ export default function Filter() {
   useEffect(() => {
     dispatch(fetchCategories());
   }, [dispatch]);
-
   const handleCategoryChange = (category: string) => {
     dispatch(fetchRecipe({ category }));
   };
@@ -28,7 +27,7 @@ export default function Filter() {
       >
         <option value="">Choose a category</option>
         {categories.map((category) => (
-          <option key={category.strCategory} value={category.strCategory}>
+          <option key={category.idCategory} value={category.strCategory}>
             {category.strCategory}
           </option>
         ))}
