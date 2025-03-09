@@ -11,6 +11,6 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "public", // Вказуємо вихідну папку для білду
+    sourcemap: true,
   },
 });
