@@ -24,10 +24,10 @@ export default function RecipeList() {
 
   return (
     <div className={CSS.wrapperList}>
-      <ul>
+      <ul className={CSS.list}>
         {meals.length > 0 ? (
           meals.map((meal) => (
-            <li key={meal.idMeal} className={CSS.box}>
+            <li key={meal.idMeal} className={CSS.item}>
               <RecipeCard meal={meal} />
             </li>
           ))

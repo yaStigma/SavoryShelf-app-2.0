@@ -7,6 +7,7 @@ const getNavLinkClass = ({ isActive }: { isActive: boolean }) => {
 };
 export default function Header() {
   return (
+    <header>
     <nav className={CSS.wrapper}>
       <NavLink to="/" className={getNavLinkClass}>
         All recipes
@@ -14,6 +15,6 @@ export default function Header() {
       <NavLink to="/recipesShelf" className={getNavLinkClass}>
         Your recipes Shelf
       </NavLink>
-    </nav>
+    </nav></header>
   );
 }

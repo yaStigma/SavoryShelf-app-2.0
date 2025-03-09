@@ -1,0 +1,16 @@
+.wrapperList {
+  border-radius: 20px;
+  /* border: 1px solid var(--color--bg--nav); */
+  margin: 20px 20px 20px 20px;
+  background-color: var(--color-bg--main);
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.item {
+  width: 600px;
+  margin: 15px;
+}

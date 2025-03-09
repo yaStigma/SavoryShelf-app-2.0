@@ -22,5 +22,5 @@
 
 .content {
   flex: 1;
-  background-color: var(--color-bg--main);
+  background-color: var(--color--bg--nav);
 }
