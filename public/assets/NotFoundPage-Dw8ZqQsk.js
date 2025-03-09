@@ -1,0 +1,1 @@
+import{j as e}from"./index-DgMEDCfL.js";const s={};function r(){return e.jsxs("div",{className:s.wrapper,children:[e.jsx("h2",{className:s.title,children:"Oops, something went wrong"}),e.jsx("p",{className:s.text,children:"Please return to the recipe selection"})]})}export{r as default};

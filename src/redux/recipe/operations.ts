@@ -1,14 +1,12 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
+import {Meal, Category, MealsResponse, CategoriesResponse} from "../../type";
 
 axios.defaults.baseURL = "https://www.themealdb.com/api/json/v1/1";
 
-export const fetchRecipe = createAsyncThunk(
+export const fetchRecipe = createAsyncThunk<Meal[], { category?: string; search?: string }>(
   "recipe/fetch",
-  async (
-    { category, search }: { category?: string; search?: string },
-    thunkAPI
-  ) => {
+  async ({ category, search }, thunkAPI) => {
     try {
       let url = "/search.php?s=";
       let params = {};
@@ -21,7 +19,7 @@ export const fetchRecipe = createAsyncThunk(
       } else {
         url = "/search.php?f=a";
       }
-      const { data } = await axios.get(url, { params });
+      const { data } = await axios.get<MealsResponse>(url, { params });
 
       return data.meals || [];
     } catch (error: unknown) {
@@ -34,28 +32,35 @@ export const fetchRecipe = createAsyncThunk(
   }
 );
 
-export const fetchCategories = createAsyncThunk(
+export const fetchCategories = createAsyncThunk<Category[]>(
   "recipe/fetchCategories",
-  async () => {
+  async (_, thunkAPI) => {
     try {
-      const response = await axios.get("/list.php?c=list");
-      return response.data.meals;
-    } catch (error) {
-      console.error("Error fetching categories:", error);
-      throw error;
+      const { data } = await axios.get<CategoriesResponse>("/list.php?c=list");
+      return data.meals || [];
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        return thunkAPI.rejectWithValue(error.message);
+      }
+      return thunkAPI.rejectWithValue("Failed to fetch categories");
     }
   }
 );
 
-export const fetchRecipeById = createAsyncThunk(
+export const fetchRecipeById = createAsyncThunk<Meal, string>(
   "recipe/fetchById",
-  async (id: string) => {
+  async (id, thunkAPI) => {
     try {
-      const { data } = await axios.get(`/lookup.php?i=${id}`);
-      return data.meals[0];
-    } catch (error) {
-      console.error("Error fetching recipe by ID:", error);
-      throw error;
+      const { data } = await axios.get<MealsResponse>(`/lookup.php?i=${id}`);
+      if (data.meals && data.meals.length > 0) {
+        return data.meals[0];
+      }
+      return thunkAPI.rejectWithValue("Recipe not found");
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        return thunkAPI.rejectWithValue(error.message);
+      }
+      return thunkAPI.rejectWithValue("Failed to fetch recipe by ID");
     }
   }
 );
