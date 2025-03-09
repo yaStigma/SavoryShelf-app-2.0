@@ -13,7 +13,7 @@ export default function RecipeList() {
   useEffect(() => {
     dispatch(fetchRecipe({ category: "", search: "" }));
   }, [dispatch]);
-  console.log("Fetched meals in RecipeList:", meals);
+
   if (status === "loading") {
     return <div>Loading...</div>;
   }

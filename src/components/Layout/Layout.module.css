@@ -1,25 +1,26 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Висота на весь екран */
+  min-height: 100vh;
 }
 
 .header {
   display: flex;
   flex-direction: row;
-  flex-shrink: 0; /* Фіксована висота для хедера */
+  flex-shrink: 0;
 }
 
 .mainWrapper {
-  flex: 1; /* Головна частина займає весь доступний простір */
+  flex: 1;
   display: flex;
-  flex-direction: row; /* Розташування в ряд */
+  flex-direction: row;
 }
 
 .dashboard {
-  flex: 0 0 180px; /* Фіксована ширина сайдбара (Dashboard) */
+  flex: 0 0 180px;
 }
 
 .content {
-  flex: 1; /* Контент займає всю доступну ширину */
+  flex: 1;
+  background-color: var(--color-bg--main);
 }

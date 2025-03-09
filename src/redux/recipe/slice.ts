@@ -1,15 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { fetchRecipe, fetchRecipeById, fetchCategories } from "./operations"; 
-import {Meal} from "../../type"
-import {Category} from "../../type"
+import {Meal, Category, RecipeState} from "../../type"
 
-  interface RecipeState {
-    meals: Meal[]; 
-    recipe: Meal | null;
-    categories: Category[];
-    status: 'idle' | 'loading' | 'succeeded' | 'failed';
-    error: string | null;
-  }
+
+
   const initialState: RecipeState = {
     meals: [],
     recipe: null,

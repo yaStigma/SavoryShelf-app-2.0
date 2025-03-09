@@ -39,6 +39,7 @@
   border-radius: 20px;
   border: 1px solid var(--color--bg--nav);
   background-color: transparent;
+  cursor: pointer;
 }
 .btn:hover,
 .btn:focus {

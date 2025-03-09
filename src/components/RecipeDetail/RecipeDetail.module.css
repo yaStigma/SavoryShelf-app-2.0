@@ -1,29 +1,109 @@
-.wrapper {
+.wrapperDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 20px;
+  border: 1px solid var(--color--bg--nav);
   padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
+  margin: 20px 20px 20px 20px;
+  background-color: transparent;
 }
-
-.image {
+.box {
+  display: flex;
+  align-items: flex-start;
+}
+.DetailsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
-  max-width: 300px;
+  margin-bottom: 20px;
+}
+.image {
+  width: 200px;
   height: auto;
-  margin-bottom: 20px;
+  border-radius: 20px;
+  margin-right: 20px;
 }
+.wrapperCard {
+  display: flex;
 
-.title {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--color--bg--nav);
+  padding: 20px;
+  margin: 20px 0 20px 20px;
+  background-color: var(--color-text-main--light);
 }
-
+.name {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--color--text--main--dark);
+  padding-bottom: 25px;
+}
+.location {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color--text--main--dark);
+  padding-bottom: 24px;
+}
 .category {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color--text--main--dark);
+  padding-bottom: 15px;
 }
 
-.instructions {
-  font-size: 1.1em;
-  line-height: 1.6;
+.video {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color--text--main--dark);
+  text-decoration: none;
+  cursor: pointer;
+}
+.video:hover,
+.video:focus {
+  text-decoration: underline;
+}
+.btn {
+  width: 240px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--color--bg--nav);
+  background-color: var(--color-text-main--light);
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--color--bg--nav);
+  color: var(--color-text-main--light);
+}
+.title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color--text--main--dark);
+  padding-bottom: 12px;
+}
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color--text--main--dark);
+  padding-bottom: 15px;
+}
+
+.ingredientItem {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color--text--main--dark);
+  padding-top: 5px;
+  border-bottom: 1px dashed var(--color--text--main--dark);
 }
