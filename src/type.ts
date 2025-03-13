@@ -36,4 +36,5 @@ export interface Meal {
     categories: Category[];
     status: 'idle' | 'loading' | 'succeeded' | 'failed';
     error: string | null;
+    currentPage: number;
   }

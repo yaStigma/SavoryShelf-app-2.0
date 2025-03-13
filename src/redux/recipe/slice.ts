@@ -10,12 +10,15 @@ import {Meal, Category, RecipeState} from "../../type"
     categories: [],
     status: 'idle',
     error: null,
+    currentPage: 1,
   };
 const recipeSlice = createSlice({
   name: 'recipe',
   initialState,
   reducers: {
-
+    setPage: (state, action) => {
+      state.currentPage = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -61,4 +64,5 @@ const recipeSlice = createSlice({
   },
 });
 
+export const { setPage } = recipeSlice.actions;
 export default recipeSlice.reducer;
